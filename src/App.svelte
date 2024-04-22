@@ -8,17 +8,17 @@
   let isErasing = false;
 
   onMount(() => {
-    canvas.width = 800 * 2;  // Using a scale factor for high resolution
+    canvas.width = 800 * 2;
     canvas.height = 600 * 2;
     canvas.style.width = '800px';
     canvas.style.height = '600px';
 
     ctx = canvas.getContext('2d');
-    ctx.scale(2, 2);  // Adjusting for the high resolution
+    ctx.scale(2, 2);
     ctx.lineCap = 'round';
     ctx.strokeStyle = color;
     ctx.lineWidth = lineWidth;
-    ctx.globalCompositeOperation = 'source-over';  // Default to drawing mode
+    ctx.globalCompositeOperation = 'source-over';
   });
 
   $: if (ctx) {
